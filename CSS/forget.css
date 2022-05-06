@@ -1,0 +1,64 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 23 Mar, 2022, 6:03:00 PM
+    Author     : Nancy
+*/
+
+*{
+    margin:0px;
+    padding:0px;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    background-image:url('../Images/main.jpeg');
+    background-size: cover;
+}
+form{
+    background-color: rgba(54, 52, 52, 0.6);;
+    width: 438px;
+    height: 329px;
+    margin-left: 380px;
+    margin-top: 58px;
+    border-radius: 8px;
+    font-size: 30px;
+    padding-top: 10px;
+    padding-left: 5%;
+    color: rgb(10, 9, 9);
+}
+label{
+    font-size: 22px;
+    font-weight: bold;
+}
+h1{
+    font-size: 45px;
+    display: flex;
+}
+input{
+    width: 350px;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255,0.6);
+    color: black;
+    border-radius: 4px;
+    box-shadow: none;
+}
+
+#s{
+    margin-top: 20px;
+    background-color: black;
+    color: rgb(240, 236, 236);
+    font-size: 22px;
+    font-weight: bold;
+    width: 350px;
+    border-radius: 4px;
+}
+#s:hover{
+    color: black;
+    background-color: rgb(240, 236, 236);
+    box-shadow: none;
+}

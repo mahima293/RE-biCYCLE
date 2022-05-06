@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sign UP</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../CSS/signup.css">
+    </head>
+    <body>
+        <script type = "text/javascript" >
+function preventBack() { window.history.forward(); }
+setTimeout("preventBack()", 0);
+window.onunload = function () { null };
+</script>
+        <div class="root">
+            <a href="login.html">Back</a>
+        <h1>Sign Up</h1>
+        <!--action="../JSP/signup.jsp"-->
+        <form id="register" method="post" action="../JSP/signup.jsp" oninput="return validate()">
+            <table>
+                <tr>
+                    <td><label>First Name: </label></td>
+                    <td><input type="text" placeholder="First Name" name="fname" id="fn" required><div id="s1"></div></td>                    
+                </tr>
+                <!--<span id="s1"></span>-->
+                <tr>
+                    <td><label>Last Name: </label></td>
+                    <td><input type="text" placeholder="Last Name" name="lname" id="ln" required><div id="s2"></div></td>
+                </tr>
+                <tr>
+                    <td><label>Smart Card ID: </label></td>
+                    <td><input type="text" name="sid" id="bd" required><div id="s3"></div></td>
+                </tr>
+                <tr>
+                    <td><label>E-mail: </label></td>
+                    <td><input type="email" placeholder="Enter your email" name="email" id="en" required><div id="s4"></div></td>
+                </tr>
+                <tr>
+                    <td><label>Phone Number: </label></td>
+                    <td><input type="tel" name="contact" placeholder="8888888888" maxlength="10"  title="Ten digits code" id="ph" required ><div id="s6"></div></td>
+                </tr>
+                <tr>
+                    <td><label>Hostel Name: </label></td>
+                    <td><input type="text" name="hname" required></td>
+                </tr>
+                <tr>
+                    <td><label>Room Number: </label></td>
+                    <td><input type="number" name="roomno" required></td>
+                </tr>
+                <tr>
+                    <td><label>Password: </label></td>
+                    <td><input type="password" name="pswrd" id="sp" required><div id="s5"></div></td>
+                </tr>
+                <tr>
+                    <td><label>Confirm Password: </label></td>
+                    <td><input type="password" name="cpswrd" required></td>
+                </tr>
+                <tr>
+                    <td><label>Security Question: </label></td>
+                    <td><select name="security" id="ques" required>
+                <option value="none" selected disabled hidden>Select</option>
+                <option value="Who was your childhood Hero">Who was your childhood Hero</option>
+                <option value="What is the first name of your best friend in high school">What is the first name of your best friend in high school</option>
+                <option value="What is the name of your favorite cousin">What is the name of your favorite cousin</option>
+                <option value="What is your dream job">What is your dream job</option>
+                <option value="What was the first thing you learned to cook">What was the first thing you learned to cook</option>
+            </select></td>
+                </tr>
+                <tr>
+                    <td><label>Answer: </label></td>
+                    <td><input type="text" name="sanswer" required></td>
+                </tr>
+            </table>
+            <button name="signup_btn">Sign up</button>
+        </form>
+
+    </div>
+         <script>
+            function validate(){
+                var s1=document.getElementById("fn").value;
+                var s2=document.getElementById("ln").value;
+                var s3=document.getElementById("bd").value;
+                var s4=document.getElementById("en").value;
+                var s5=document.getElementById("sp").value;
+                var s6=document.getElementById("ph").value;
+                var b=/^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
+                var e=/^[1-9][0-9]{9}$/
+                var c=/^[A-Z]{5}[0-9]{5}$/;
+                var status=false;
+                var a=/^[A-Z][a-z]*$/;
+                var d=new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
+                if(!a.test(s1)){
+                    document.getElementById("s1").innerHTML="* Please Enter Letters only!!!";
+                    document.getElementById("s1").style.color="red";
+                    document.getElementById("s1").style.fontSize="12px";
+                    status=false;
+                }
+                else if(a.test(s1)){
+                    document.getElementById("s1").innerHTML="";
+                }
+                if(!a.test(s2)){
+                    document.getElementById("s2").innerHTML="* Please Enter Letters only!!!";
+                    document.getElementById("s2").style.color="red";
+                    document.getElementById("s2").style.fontSize="12px";
+                    status=false;
+                }
+                else if(a.test(s2)){
+                    document.getElementById("s2").innerHTML="";
+                }
+                if(!c.test(s3)){
+                    document.getElementById("s3").innerHTML="* Please Enter correct ID!!!";
+                    document.getElementById("s3").style.color="red";
+                    document.getElementById("s3").style.fontSize="12px";
+                    status=false;
+                }
+                else if(c.test(s3)){
+                    document.getElementById("s3").innerHTML="";
+                }
+                if(!b.test(s4)){
+                    document.getElementById("s4").innerHTML="* Please Enter Correct Mail!!!";
+                    document.getElementById("s4").style.color="red";
+                    document.getElementById("s4").style.fontSize="12px";
+                    status=false;
+                }
+                else if(b.test(s4)){
+                    document.getElementById("s4").innerHTML="";
+                }
+              if(!d.test(s5)){
+                    document.getElementById("s5").innerHTML="* Please Enter Strong Password containing at least 1Ucase,1Lcase,1Digit,1SpecialCharacter!!!";
+                    document.getElementById("s5").style.color="red";
+                    document.getElementById("s5").style.fontSize="12px";
+                    status=false;
+                }
+                else if(d.test(s5)){
+                    document.getElementById("s5").innerHTML="";
+                }
+                if(!e.test(s6)){
+                    document.getElementById("s6").innerHTML="* Please Enter Valid Phone Number!!!";
+                    document.getElementById("s6").style.color="red";
+                    document.getElementById("s6").style.fontSize="12px";
+                    status=false;
+                }
+                else if(e.test(s6)){
+                    document.getElementById("s6").innerHTML="";
+                }
+               
+                if(a.test(s2) && a.test(s1) && b.test(s4) && c.test(s3) && d.test(s5)  &&e.test(s6)){
+                    status=true;
+                }
+                return status;
+    }
+        </script>
+    </body>
+</html>

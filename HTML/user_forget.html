@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../CSS/ppp.css" type="text/css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap" rel="stylesheet">
+            <script type = "text/javascript" >
+function preventBack() { window.history.forward(); }
+setTimeout("preventBack()", 0);
+window.onunload = function () { null };
+</script>
+    </head>
+    <body class="container">
+                <div class="container">
+        <form method="post">
+            <h1>Forget Password</h1>
+            <div class="cont">
+                <label>User Id</label><br>
+                <input type="text" name="id" id="u" placeholder="Enter Your ID" required/><div id="s1"></div><br>
+                <label>Enter new password</label><br>
+                <input type="password" name="pass" id="p" placeholder="Enter New Password" required/><div id="s2"></div><br>
+                <label>Confirm password</label><br>
+                <input type="password" name="cpass" id="cp" placeholder="Confirm your password" required/><br>
+                <button type="submit" formaction="../JSP/user_search.jsp" id="s" oninput="return validate()">Validation</button>
+            </div>
+        </form>
+        </div>
+       <script>
+            function validate(){
+                var s1=document.getElementById("u").value;
+                var s2=document.getElementById("p").value;
+                var a=/^[A-Z]{5}[0-9]{5}$/;
+                var status=false;
+                var b=new RegExp("^(?=.[a-z])(?=.[A-Z])(?=.[0-9])(?=.[!@#\$%\^&\*])(?=.{8,})");
+                if(!a.test(s1)){
+                    document.getElementById("s1").innerHTML="* Please Enter Correct Banasthali Id!!!";
+                    document.getElementById("s1").style.color="red";
+                    document.getElementById("s1").style.fontSize="12px";
+                    status=false;
+                }
+                else if(a.test(s1)){
+                    document.getElementById("s1").innerHTML="";
+                }
+                if(!b.test(s2)){
+                    document.getElementById("s2").innerHTML="* Please Enter Strong Password containing at least 1Ucase,1Lcase,1Digit,1SpecialCharacter!!!";
+                    document.getElementById("s2").style.color="red";
+                    document.getElementById("s2").style.fontSize="12px";
+                    status=false;
+                }
+                else if(b.test(s2)){
+                    document.getElementById("s2").innerHTML="";
+                }
+                
+                if(a.test(s1) && b.test(s2)){
+                    status=true;
+                }
+                return status;
+    }
+        </script>
+    </body>
+</html>

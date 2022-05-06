@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding:0;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-image:url('../Images/main.jpeg');
+    /* background-position: 233px 0px;
+    position: absolute;
+    background-attachment: fixed;
+    font-family: sans-serif; */
+    background-size: cover;
+  background-repeat: no-repeat;
+}
+h1{
+    text-align: center;
+    color: rgb(12, 11, 114, 23, 23);
+    margin-bottom: 1%;
+    font-size: 40px;
+}
+.main{
+    /* position: relative;
+    background-color: rgba(43, 47, 48, 0.384);
+    width: 122%;
+    height: 82vh;
+    margin-left: 74%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    border-radius: 8px;
+    font-size: 30px;
+    padding-left: 6%;
+    padding-top: 3%;
+    color: rgb(10, 9, 9); */
+
+    color: rgb(10, 9, 9);
+  position: absolute;
+  background-color: rgba(43, 47, 48, 0.384);
+  width: 559px;
+  height: 559px;
+  font-size: 28px;
+  padding-top: 5px;
+  padding-left: 2%;
+  border-radius: 8px;
+  top: 0px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+label{
+    width: 115px;
+}
+input,select{
+    width: 55%;
+    padding: 2%;
+    margin-left: 8%;
+    margin-top: 5%;
+    border-radius: 3px;
+    background-color: rgba(14, 12, 12, 0.58);
+    color: rgb(221, 221, 221);
+    border: 1px solid rgb(221, 221, 221);
+    outline: 0px;
+}
+
+.dte:hover{
+    color: white;
+}
+textarea{
+    width: 72%;
+    padding: 1%;
+    margin-left: 8%;
+    margin-top: 5%;
+    border-radius: 3px;
+    background-color: rgba(14, 12, 12, 0.58);
+    color: rgb(221, 221, 221);
+    border: 1px solid rgb(221, 221, 221);
+    outline: 0px;
+}
+button{
+    background-color: rgb(24, 23, 23);
+    color: white;
+    border: 1px solid white;
+    margin-left: 33%;
+    margin-top: 5%;
+    width: 25%;
+    padding: 1.5%;
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 900px)
+{
+  body{
+    background-image: none;
+  }
+}
+@media only screen and (min-width: 900px)
+{
+  body{
+    background-image:url('../Images/photo-1559348349-86f1f65817fe (1).jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}

@@ -1,0 +1,176 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 24 Mar, 2022, 12:43:06 PM
+    Author     : Nancy
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+/* body{
+    background-image: url(../Img/main.jpeg);
+    background-position: 233px 28px;
+    position: absolute;
+    background-attachment: fixed;
+    /* animation: change 20s infinite ; 
+
+
+    animation-name: change;
+    animation-direction: alternate-reverse;
+    animation-duration: 30s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-timing-function:linear;
+    
+} */
+body{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    background-image:  url("../Images/main.jpeg");
+    background-position: 0px -89px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    animation: change 20s infinite;
+}
+
+/* #videoBG{
+    position: fixed; 
+    z-index: -1; 
+    
+}
+
+@media (min-aspect-ratio: 16/9)
+{
+    #videoBG{
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio: 16/9)
+{
+    #videoBG{
+        width: 100%;
+        height: auto;
+    }
+} */
+
+
+/* .header{
+
+} */
+.navbar{
+   background-color: black;
+    display: flex;
+    padding: 1% 1%;
+    height: 80px;
+    justify-content: space-between;
+    align-items: center;
+}
+.navb h1{
+    color: white;
+    /*align-content: left;*/
+    /*text-align: left;*/
+    font-size: xx-large;
+    margin-left: -420px;
+    padding-left: 4px;
+}
+.navb h3{
+    color: white;
+    margin-left: -380px;
+}
+
+#p1{
+    padding-left: 48px;
+    margin-left: -390px;
+    font-size: x-large
+}
+img{
+    height: 80px;
+    width: 100px;
+}
+.navb{
+    text-align: left;
+}
+.c1{
+    display: flex;
+    /* flex: 1;
+    text-align: right; */
+    flex-direction: row;
+}
+.c1 ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.c1 ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+} 
+/*.c1 ul li a:hover{
+    text-decoration: underline;
+    color: blue;
+
+}*/
+.d11{
+    margin: 22px 19px;
+    padding: 52px 345px;
+    width: 8%;
+    border-radius: 28px;
+    float: right;
+    top: 0px;
+}
+.d11 p{
+    font-size: 60px;
+    color:black;
+}
+
+@keyframes change{
+    0%
+    {
+        background-image: url("../Images/img6.jpeg");
+    }
+    20%
+    {
+        background-image: url("../Images/140133.jpg");
+        /* background-image: url(../Img/597903.jpg); */
+    }
+    40%
+    {
+        background-image: url("../Images/1.jpg");
+    }
+    60%
+    {
+        background-image: url("../Images/2.jpg");
+    }
+    80%
+    {
+        background-image: url("../Images/BikesontheBeach.jpg");
+    }
+    100%
+    {
+        background-image: url("../Images/img6.jpeg");
+    }
+}
+.button{
+    display: block;
+    width: 115px;
+    height: 39px;
+    background: white;
+    border-radius: 5px;
+    color: black;
+    text-align: center;
+}

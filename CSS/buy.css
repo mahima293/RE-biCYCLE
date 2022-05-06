@@ -1,0 +1,25 @@
+.search{
+    position: absolute;
+    padding: 10px;
+    margin-top: 25px;
+    margin-left: -25px;
+    width: 220px;
+    height: 350px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+.mychoice, .mychoice1, .mychoice2, .mychoice3{
+    width: 170px;
+    height: 40px;
+    margin-top: 20px;
+}
+.search_display{
+/*    display: inline-block;
+    justify-content: space-between;
+    flex-direction: row;                                        */
+}
+.display_images{
+    margin-left: 20%;
+}
+
